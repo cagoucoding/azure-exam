@@ -2,7 +2,7 @@
 
 ## TODO
 
-- [ ] Create Azure account  
+- [X] Create Azure account  
 - [ ] Read Azure documentation  
 - [ ] Follow / record the virtual courses  
 - [ ] Check if exam voucher is well received
