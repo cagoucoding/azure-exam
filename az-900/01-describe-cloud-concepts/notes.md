@@ -155,3 +155,33 @@ Choose the best response for each question. Then select Check your answers.
     - [ ] Disaster recovery  
     - [ ] High availability  
     - [X] Geographic isolation  
+
+# Azure architecture fundamentals
+
+## Overview
+
+Four levels in Azure:  
+
+- management groups: manage access, policy and compliance for multiple subscriptions  
+- subscriptions: Manage costs and the resources created by users, teams or projects  
+- resources groups: logical container into which resources are  
+- resources: created instances of services  
+
+![alt text](../images/resources-level.png "Resources levels in Azure")
+
+## Regions availability zones  
+
+`Region` is a geographical area that contains at least one but potentially multiple datacenters that are nearby and networked together with a low-latency network.  
+Examples: West US, West Europe, Australia East, ...  
+
+### Special Azure regions
+
+Exist for compliance or legal purposes  
+Examples: US DoD Central, US Gov Virginia, China East  
+
+### Availability zone
+
+Physically separate datacenters within an Azure region.
+It is set up to be an isolation boundary.  
+
+![alt text](../images/availability-zones.png "Availability zones")
