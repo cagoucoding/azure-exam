@@ -185,3 +185,108 @@ Physically separate datacenters within an Azure region.
 It is set up to be an isolation boundary.  
 
 ![alt text](../images/availability-zones.png "Availability zones")
+
+### Azure region pairs  
+
+Each region is always paired with another region within the same geography (such as US, Europe or Asia).
+It was created to prevent of a large disaster which could cause two closed datacenters.  
+
+## Azure resources and Azure Resource Manager  
+
+### Azure resource groups
+
+A resource group (RG) is a logical container for resources deployed on Azure.  
+It helps to manage and organize your Azure resources.  
+
+If you delete a RG, all resources contained within it are also deleted.  
+
+RG are also a scope for applying RBAC permissions.  
+
+### Azure Resource Manager (ARM)  
+
+Azure Resource Manager is the deployment and management service for Azure.  
+When a user sends a request from any of Azure tools - APIs or SDKs - ARM receives, 
+authenticates and authorizes the request. Then it sends the request to the Azure service, 
+which takes the requested action.  
+
+![alt text](../images/consistent-management-layer.png "ARM and request")
+
+Benefits of using ARM:  
+
+- manage infrastructure through declarative templates (JSON)  
+- deploy, manage, monitor all the resources for your solution as a group  
+- redeploy your solution throughout the development lifecycle  
+- define the dependencies between resources  
+- apply access control to all services (RBAC natively intagrated)  
+- apply tags to resources to logically all the resources in your subscription  
+- clarify your orga's billing  
+
+## Azure subscriptions and management groups  
+
+### Azure subscriptions  
+
+It is required to use Azure and provides you with authenticated and authorized access to Azure products and services.  
+An Azure subscription is a logical unit of Azure services that links to an Azure account, 
+which is an identity in Azure Active Directory (Azure AD) or in a directory that Azure AD trusts.  
+
+![alt text](../images/subscriptions.png "Subscription")  
+
+An account can have one or multiple subscriptions.  
+Use Azure subscriptions to define boundaries around Azure products, services and resources:
+
+- billing boundary: for generating billing reports and invoices for each subs.  
+- access control boundary: for reflecting different organizational structures.  
+- environment boundary: for seperating environments (dev, test, security, etc).  
+
+#### Customize billing  
+
+If you have multiple subscriptions, you can organize them into invoice sections. Each invoice section is a line item on the invoice that shows the charges incurred that month.  
+
+For example, you might need a single invoice for your organization but want to organize charges by department, team, or project.  
+
+![alt text](../images/billing-structure-overview.png "Billing overview")  
+
+### Azure management groups  
+
+Azure management groups provide a level of scope above subscriptions. You organize subscriptions into containers called management groups and apply your governance conditions to the management groups.  
+All subscriptions within a single management group must trust the same Azure AD tenant.  
+
+![alt text](../images/management-groups-and-subscriptions-example.png "Management groups example")  
+
+Important facts about management groups:
+
+- 10,000 management groups can be supported in a single directory.  
+- A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.  
+- Each management group and subscription can support only one parent.  
+- Each management group can have many children.  
+- All subscriptions and management groups are within a single hierarchy in each directory.  
+
+## Exercise - Create a website hosted in Azure
+
+**Easy**
+
+## Knowledge check
+
+1. Which of the following can be used to manage governance across multiple Azure subscriptions?
+
+    - [ ] Azure initiatives  
+    - [X] Management groups  
+    - [ ] Resource groups  
+
+2. Which of the following is a logical unit of Azure services that links to an Azure account?
+
+    - [X] Azure subscription  
+    - [ ] Management group  
+    - [ ] Resource group  
+    - [ ] Public cloud  
+
+3. Which of the following features doesn't apply to resource groups?
+
+    - [ ] Resources can be in only one resource group.  
+    - [ ] Role-based access control can be applied to the resource group.  
+    - [X] Resource groups can be nested.  
+
+4. Which of the following statements is a valid statement about an Azure subscription?
+
+    - [ ] Using Azure doesn't require a subscription.  
+    - [X] An Azure subscription is a logical unit of Azure services.  
