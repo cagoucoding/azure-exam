@@ -263,7 +263,9 @@ Important facts about management groups:
 
 ## Exercise - Create a website hosted in Azure
 
-**Easy**
+[source](https://docs.microsoft.com/en-us/learn/modules/azure-architecture-fundamentals/exercise-create-website)
+
+**Easy**: create Wordpress service
 
 ## Knowledge check
 
