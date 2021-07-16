@@ -36,3 +36,28 @@ Examples of use cases:
 - When running applications in the cloud  
 - When extending your datacenter to the cloud  
 - During disaster recovery  
+
+Two possibility to scale VMs in Azure:
+
+- Virtual machine scale sets: group of identical load-balanced VMs. Autoscaling possible.    
+- Azure Batch: large-scale parallel and hig-performance computing batch jobs for scaling many VMs.     
+
+## Azure App Service
+
+App Service enables you to build and host web apps, background jobs, mobile back-ends, 
+and RESTful APIs in the programming language of your choice without managing infrastructure.  
+
+Types of app services:  
+
+- Web apps: Java, Ruby, Node.js, PHP or Python apps running on Windows or Linux OS.   
+- API apps: REST-based web APIs.  
+- WebJobs: run a program or script. Often used to run background tasks.  
+- Mobile apps  
+
+## Azure Container Instances or Kubernetes Service
+
+- **Azure Container Instances**: simplest way to run a container in Azure.  
+
+- **Azure Kubernetes Service**: complete orchestration service for containers.  
+
+## Azure Functions  
