@@ -197,3 +197,87 @@ Azure Active Directory
 ```
 
 **NB**: It needs Premium license  
+
+# AD Device Management  
+
+## Intro  
+
+Management of physical devices - phones, tablets, laptops and desktop computers - 
+granted access to company resources via **device-based Conditional Access**  
+
+Under Azure portal section:  
+```
+Azure Active Directory
+    └ Devices
+```
+
+3 ways to get devices into Azure AD:
+
+- Azure AD Registred  
+  - personally owned or mobile devices  
+  - signed in with personal Microsoft or local account  
+
+- Azure AD Joined  
+  - owned by organization  
+  - signed in with an Azure AD account belonging to the organization  
+  - only exist in the cloud  
+
+- Hybrid Azure AD Joined  
+  - owned by organization  
+  - signed in with an AD domain Services account belonging to the orga  
+  - exist in the cloud and on-prem  
+
+## AD Registered Devices  
+
+## Windows Hello  
+
+Alternative way to log into their devices and app:  
+
+- fingerprint  
+- iris scan  
+- facial recognition  
+
+## Mobile Device Management (MDM) & Mobile Application Management (MAM)  
+
+- MDM  
+  - control the entire device  
+  - wipe data  
+  - reset to factory settings  
+
+- MAM  
+  - publish / push / configure / secure / monitor / update mobile apps  
+
+Managed via **Microsoft Intune** -> needs Azure AD Premium 2  
+
+**NB**: Intune = Endpoint Manager = EMS  
+
+## Microsoft Enterprise Mobility + Security (EMS)  
+
+An umbrella of multiple Microsoft and Azure services -> Azure AD & Microsoft Itune  
+
+## Microsoft Authenticator  
+
+App for secure sign-ins  
+
+## AD Joined Devices  
+
+## FIDO2 Security Keys  
+
+Fast Identity Online Alliance: industry association which develop and promote 
+authentication standards to help reducing the world's over-reliance on passwords  
+
+3 sets of open specifications:  
+- FIDO Universal Second Factor (FIDO U2F)  
+- FIDO Universal Authentication Framework (FIDO UAF)  
+- Client to Authenticator Protocols (CTAP)  
+- CTAP is complementary to the W3C's Web Authentication (WebAuthn) -> FIDO2  
+
+**Security key**: secondary device used as a second step in authentication 
+process to gain access to a device, workstation or application  (ex: Yubikey)  
+
+## Hybrid Azure AD Joined Devices  
+
+## Windows Autopilot  
+
+Collection of technologies used to set up and pre-configure new devices 
+for being production-ready  

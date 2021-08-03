@@ -1,22 +1,33 @@
 # Azure Exam  
 
-
-## [AZ-900](./az-900)  
+## AZ-900  
 
 ### Learning path  
 
-1. [Describe Cloud concepts](./az-900/01-describe-cloud-concepts/notes.md)  
+- [Describe Cloud concepts](./az-900/01-describe-cloud-concepts/notes.md) (20-25%)  
 
-2. [Describe core Azure services](./az-900/02-describe-azure-services/notes.md)  
+- [Describe core Azure services](./az-900/02-describe-azure-services/notes.md) (15-20%) 
 
 
-### [Resources](./az-900/resources.md)  
+### Resources  
 
-### [TODO](./az-900/todo.md)  
+All [resources](./az-900/resources.md) used for working on AZ-900 exam  
+
+### TODO  
+
+Let's check all these [tasks](./az-900/todo.md)  
 
 
 ## AZ-104  
 
-### [Manage Azure identities and governance](./az-104/01-manage-azure-identities-and-governance/notes.md) (15-20%)
+### Learning path
 
-### [Resources](./az-104/resources.md)  
+- [Manage Azure identities and governance](./az-104/01-manage-azure-identities-and-governance/notes.md) (15-20%)
+
+### Resources  
+
+All [resources](./az-104/resources.md) used for working on AZ-104 exam  
+
+### TODO  
+
+Let's check all these [tasks](./az-104/todo.md)  

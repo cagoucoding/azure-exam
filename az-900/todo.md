@@ -8,6 +8,7 @@
 - [X] Read Azure documentation  
 - [X] Follow / record the virtual courses  
 - [X] Check if exam voucher is well received  
+- [ ] Schedule the exam    
 
 ### Documentation (exam content percentage)
 
