@@ -11,7 +11,7 @@
 
 ### Resources  
 
-All [resources](./az-900/README.md#fuseful-resources) used for working on AZ-900 exam  
+All [resources](./az-900/README.md#useful-resources) used for working on AZ-900 exam  
 
 ### TODO  
 
@@ -26,7 +26,7 @@ Let's check all these [tasks](./az-900/README.md#todo)
 
 ### Resources  
 
-All [resources](./az-104/README.md#fuseful-resources) used for working on AZ-104 exam  
+All [resources](./az-104/README.md#useful-resources) used for working on AZ-104 exam  
 
 ### TODO  
 
