@@ -22,7 +22,7 @@ Let's check all these [tasks](./az-900/todo.md)
 
 ### Learning path
 
-- [Manage Azure identities and governance](./az-104/01-manage-azure-identities-and-governance/notes.md) (15-20%)
+- [Manage Azure identities and governance](./az-104/01-manage-azure-identities-and-governance/README.md) (15-20%)
 
 ### Resources  
 
