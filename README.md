@@ -4,9 +4,9 @@
 
 ### Learning path  
 
-- [Describe Cloud concepts](./az-900/01-describe-cloud-concepts/notes.md) (20-25%)  
+- [Describe Cloud concepts](./az-900/01-describe-cloud-concepts/README.md) (20-25%)  
 
-- [Describe core Azure services](./az-900/02-describe-azure-services/notes.md) (15-20%) 
+- [Describe core Azure services](./az-900/02-describe-azure-services/README.md) (15-20%) 
 
 
 ### Resources  
