@@ -91,25 +91,25 @@ Can bring their own identities
 
 ```
 Azure Active Directory
-    └ Manage tenants
-        └ Create
-          ├ Tenant type: Azure Active Directory
-          ├ Org name: Cagou Coding
-          ├ Initial domain name: cagoucoding
-          └ Country: France
+└ Manage tenants
+  └ Create
+    ├ Tenant type: Azure Active Directory
+    ├ Org name: Cagou Coding
+    ├ Initial domain name: cagoucoding
+    └ Country: France
 ```
 
 ### Upgrade License
 
 ```
 Azure Active Directory
-    └ Licenses
-        └ All products
-          ├ Tenant type: Azure Active Directory
-          ├ Org name: Cagou Coding
-          ├ Initial domain name: cagoucoding
-          └ Try / Buy
-              └ Activate: Azure AD Premium P2   
+└ Licenses
+  └ All products
+    ├ Tenant type: Azure Active Directory
+    ├ Org name: Cagou Coding
+    ├ Initial domain name: cagoucoding
+    └ Try / Buy
+      └ Activate: Azure AD Premium P2   
 ```
 
 ### Users and Groups  
@@ -118,28 +118,28 @@ Azure Active Directory
 
 ```
 Azure Active Directory
-    └ Groups
-        └ New group
-          ├ Group type: Security
-          ├ Group name: developers
-          └ Group description: Developers of Cagou Coding
+└ Groups
+  └ New group
+    ├ Group type: Security
+    ├ Group name: developers
+    └ Group description: Developers of Cagou Coding
 ```
 
 #### Create an User  
 
 ```
 Azure Active Directory
-    └ Users
-        └ New user
-          ├ [X] Create user 
-          ├ User name: brian@cagoucoding.onmicrosoft.com
-          ├ Name: Brian Cagoucoding
-          ├ First name: Brian
-          ├ Last name: Cagoucoding
-          ├ [X] Auto-generate password -> Cohu8965
-          ├ Groups: select the group -> developers
-          ├ Roles: select the role -> Application developer
-          └ Additionnal info: ...
+└ Users
+  └ New user
+    ├ [X] Create user 
+    ├ User name: brian@cagoucoding.onmicrosoft.com
+    ├ Name: Brian Cagoucoding
+    ├ First name: Brian
+    ├ Last name: Cagoucoding
+    ├ [X] Auto-generate password -> Cohu8965
+    ├ Groups: select the group -> developers
+    ├ Roles: select the role -> Application developer
+    └ Additionnal info: ...
 ```
 
 Deleted users are still available for 30 days  
@@ -151,49 +151,49 @@ of the guest
 
 ```
 Azure Active Directory
-    └ Users
-        └ Invite user
-          ├ [X] Create user 
-          ├ Email: brian@cagoucoding.onmicrosoft.com
-          ├ Name: Brian Cagoucoding
-          ├ First name: Brian
-          ├ Last name: Cagoucoding
-          ├ Groups: select the group -> developers
-          ├ Roles: select the role -> Application developer
-          └ Additionnal info: ...
+└ Users
+  └ Invite user
+    ├ [X] Create user 
+    ├ Email: brian@cagoucoding.onmicrosoft.com
+    ├ Name: Brian Cagoucoding
+    ├ First name: Brian
+    ├ Last name: Cagoucoding
+    ├ Groups: select the group -> developers
+    ├ Roles: select the role -> Application developer
+    └ Additionnal info: ...
 ```
 
 ### Mass import  
 
 ```
 Azure Active Directory
-    └ Users
-        └ Bulk operations
-          ├ Bulk create 
-            ├ Download csv template
-            ├ Edit csv file
-            └ Upload modified csv file
+└ Users
+  └ Bulk operations
+    └ Bulk create 
+      ├ Download csv template
+      ├ Edit csv file
+      └ Upload modified csv file
 ```
 
 ### Multi-Factor Authentication  
 
 ```
 Azure Active Directory
-    └ Users
-        └ Per-user MFA
-          ├ users 
-            └ [X] Selected user
-              └ Enable
-          └ service settings 
-            ├ [X] Allow users to create app passwords to sign in to non-browser apps
-            └ Verification options -> Methods available: SMS / Notif through mobile app / Token
+└ Users
+  └ Per-user MFA
+    ├ users 
+    | └ [X] Selected user
+    |   └ Enable
+    └ service settings 
+      ├ [X] Allow users to create app passwords to sign in to non-browser apps
+      └ Verification options -> Methods available: SMS / Notif through mobile app / Token
 ```
 
 ### Self-service reset password  
 
 ```
 Azure Active Directory
-    └ Password reset
+└ Password reset
 ```
 
 **NB**: It needs Premium license  
@@ -208,7 +208,7 @@ granted access to company resources via **device-based Conditional Access**
 Under Azure portal section:  
 ```
 Azure Active Directory
-    └ Devices
+└ Devices
 ```
 
 3 ways to get devices into Azure AD:
