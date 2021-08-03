@@ -85,7 +85,7 @@ which users are assigned to a specific resource
 
 Can bring their own identities
 
-## Technical pratice
+## Follow along  
 
 ### Create a Tenant  
 
@@ -197,6 +197,16 @@ Azure Active Directory
 ```
 
 **NB**: It needs Premium license  
+
+## Exercises  
+
+> **_TODO_**: Do and document these exercises  
+
+- Exercise - [Add and delete users in Azure Active Directory](https://docs.microsoft.com/en-us/learn/modules/create-users-and-groups-in-azure-active-directory/3-exercise-add-delete-users-azure-ad)  
+- Exercise - [Assign users to Azure Active Directory groups](https://docs.microsoft.com/en-us/learn/modules/create-users-and-groups-in-azure-active-directory/5-exercise-assign-users-azure-ad-groups)  
+- Exercise - [Give guest users access in Azure Active Directory B2B](https://docs.microsoft.com/en-us/learn/modules/create-users-and-groups-in-azure-active-directory/7-exercise-guest-user-access-azure-ad-b2b)  
+- Exercise - [Set up self-service password reset](https://docs.microsoft.com/en-us/learn/modules/allow-users-reset-their-password/4-exercise-set-up-self-service-password-reset)  
+
 
 # AD Device Management  
 
@@ -375,3 +385,54 @@ Ensure compliance of resource | Control access to Azure resources
 | --- | --- |
 | Control access of AD resources | Control access to Azure resources |
 | <ul><li>Users</li><li>Groups</li><li>...</li></ul> | <ul><li>Virtual Machines</li><li>Databases</li><li>...</li></ul> |  
+
+## Exercises  
+
+> **_TODO_**: Do and document these exercises  
+
+- Exercise - [Get access to an Azure subscription](https://docs.microsoft.com/en-us/learn/modules/manage-subscription-access-azure-rbac/4-exercise-elevate-permissions)  
+- Knowledge check - [What is Azure RBAC?](https://docs.microsoft.com/en-us/learn/modules/secure-azure-resources-with-rbac/3-knowledge-check-rbac-overview)  
+- Exercise - [List access using Azure RBAC and the Azure portal](https://docs.microsoft.com/en-us/learn/modules/secure-azure-resources-with-rbac/4-list-access)  
+- Exercise - [Grant access using Azure RBAC and the Azure portal](https://docs.microsoft.com/en-us/learn/modules/secure-azure-resources-with-rbac/5-grant-access)  
+- Exercise - [View activity logs for Azure RBAC changes](https://docs.microsoft.com/en-us/learn/modules/secure-azure-resources-with-rbac/6-view-activity-logs)  
+- Knowledge check - [Using Azure RBAC](https://docs.microsoft.com/en-us/learn/modules/secure-azure-resources-with-rbac/7-knowledge-check-rbac)  
+- Exercise - [Create an Azure custom role](https://docs.microsoft.com/en-us/learn/modules/create-custom-azure-roles-with-rbac/3-exercise-create-custom-role)  
+- Exercise - [View and manage an Azure custom role](https://docs.microsoft.com/en-us/learn/modules/create-custom-azure-roles-with-rbac/5-exercise-manage-custom-roles)  
+
+
+# Azure Policies  
+
+## Intro  
+
+Enforce organizational standards and to assess compliance at-scale  
+
+- Policy Definitions: JSON file to describe business rules to control access 
+to resources  
+- Policy Assignment: Scope of a policy can effect (User, Resource Group or Management Group)  
+- Policy Parameters: Values passed into Policy definition  
+- Initiative Definitions: Collection of policy definitions  
+
+## Non-compliant Resources  
+
+```
+Policy
+└ Compliance
+  └ Non-compliant policies (list)
+```
+
+## Azure Policy Definition  
+
+## Technical Pratice  
+
+### Configure Policy  
+
+> **_TODO_**: Do and document these exercises  
+
+- Assign Policy `Audit virtual machines without disaster recovery configured` 
+to a virtual machine  
+
+#### Exercises  
+
+> **_TODO_**: Do and document these exercises  
+
+- Exercise from [learning path](https://docs.microsoft.com/en-us/learn/modules/build-cloud-governance-strategy-azure/9-restrict-location-azure-policy)
