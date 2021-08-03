@@ -281,3 +281,97 @@ process to gain access to a device, workstation or application  (ex: Yubikey)
 
 Collection of technologies used to set up and pre-configure new devices 
 for being production-ready  
+
+# Roles  
+
+## Types of Roles  
+
+3 types of Roles which can serve same purpose:  
+
+- Classic subscription administrator roles: original role system  
+- Azure roles: RBAC system built on top of Azure Resource Manager  
+- Azure AD roles: used to managed Azure AD resources in a directory  
+
+## IAM Access Controls  
+
+Identity Access Management (IAM) allows you to create and assign roles to users  
+
+### Azure Roles (RBAC system)  
+
+Roles restrict access to resource actions (operations)  
+
+- BuiltInRole: Managed Microsoft roles are read-only pre-created roles  
+- CustomRole: created by you with your own custom logic  
+
+### Role assignments  
+
+Apply a role to:  
+- Service Principal  
+- User / Group  
+
+### Deny assignments  
+
+Block users from performing specific actions -> through Azure BluePrints  
+
+### Classic Administrators  
+
+**WARNING**: Original role system but should use the new RBAC System  
+
+- Account Administrator: billing owner of the subscription but no access to Azure portal  
+- Service Administrator = Owner role at subscription scope  
+- Co-Administrator = Owner role at subscription scope  
+
+## RBAC  
+
+Helps you manage who has access to Azure resources  
+
+Roles assignments:  
+
+- security principal represents the identities requesting access to an Azure 
+resource:  
+  - *User*: an individual who has a profile in Azure AD  
+  - *Group*: a set of users  
+  - *Service Principal*: used by applications or services  
+  - *Managed Identity*: identity in Azure AD that is automatically managed by Azure  
+
+- role definition is a collection of permissions: read / write / delete  
+
+- scope is the set of resources for the Role Assignment applies to  
+
+There are 4 fundamental Azure roles:  
+- Owner  
+- Contributor  
+- Reader  
+- User Access Administrator  
+
+RBAC includes 70 built-in roles  
+
+## Azure AD roles  
+
+To manage Azure AD resources:  
+
+- create or edit users  
+- assign administrative roles to others  
+- reset user passwords  
+- manage user licenses  
+- manage domains  
+
+Important AD roles:  
+- Global Adminstrator  
+- User Administrator  
+- Billing Administrator  
+
+## Azure Roles  
+
+## Azure Policies vs. Azure Roles (RBAC)  
+
+Azure policies | Azure Roles
+--- | ---
+Ensure compliance of resource | Control access to Azure resources  
+
+## Azure AD roles vs. Azure Roles (RBAC)  
+
+| Azure AD Roles | Azure Roles |
+| --- | --- |
+| Control access of AD resources | Control access to Azure resources |
+| <ul><li>Users</li><li>Groups</li><li>...</li></ul> | <ul><li>Virtual Machines</li><li>Databases</li><li>...</li></ul> |  
