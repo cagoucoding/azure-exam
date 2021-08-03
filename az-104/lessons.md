@@ -2,9 +2,23 @@
 
 ## Azure AD
 
+### Intro  
+
+4 editions:  
+
+- **Free** MFA, SSO, Basic Security and Usage Reports, User Management  
+- **Office365 Apps** Company Branding, SLA, 2-sync between on-prem and cloud  
+- **Premium 1 (P1)** Hybrid architecture, Advanced Group Access, Conditional Access  
+- **Premium 2 (P2)** Identity Protection, Identity Gouvernance  
+
 ### Use case  
 
-Authorize and authenticate to multiple sources   
+Authorize and authenticate to multiple sources:
+
+- on-premise AD -> Azure AD Connect  
+- web app -> App Registrations  
+- allow users to login with their ipD (Facebook or Google) -> External Identities  
+- to Office365 or Azure Microsoft  
 
 ### AD terminology  
 
@@ -21,6 +35,7 @@ making this data available to network users and administrators
 
 ### Tenant
 
+Represents an organization in Azure AD.  
 Each Azure AD tenant is distinct and separate from other Azure AD tenants  
 
 ### Azure Active Directory DOmain Services (AD DS)  
@@ -99,7 +114,7 @@ Azure Active Directory
 
 ### Users and Groups  
 
-- create a Group  
+#### Create a Group  
 
 ```
 Azure Active Directory
@@ -110,7 +125,7 @@ Azure Active Directory
           └ Group description: Developers of Cagou Coding
 ```
 
-- create an User  
+#### Create an User  
 
 ```
 Azure Active Directory
@@ -118,15 +133,70 @@ Azure Active Directory
         └ New user
           ├ [X] Create user 
           ├ User name: brian@cagoucoding.onmicrosoft.com
-          ├ Name: developers
-          ├ First name: developers
-          ├ Last name: developers
+          ├ Name: Brian Cagoucoding
+          ├ First name: Brian
+          ├ Last name: Cagoucoding
           ├ [X] Auto-generate password -> Cohu8965
           ├ Groups: select the group -> developers
           ├ Roles: select the role -> Application developer
           └ Additionnal info: ...
 ```
 
+Deleted users are still available for 30 days  
+
+### Guest Users  
+
+Same as [a creation of an User](#create-an-user) but just to provide the email 
+of the guest  
+
+```
+Azure Active Directory
+    └ Users
+        └ Invite user
+          ├ [X] Create user 
+          ├ Email: brian@cagoucoding.onmicrosoft.com
+          ├ Name: Brian Cagoucoding
+          ├ First name: Brian
+          ├ Last name: Cagoucoding
+          ├ Groups: select the group -> developers
+          ├ Roles: select the role -> Application developer
+          └ Additionnal info: ...
+```
+
+### Mass import  
+
+```
+Azure Active Directory
+    └ Users
+        └ Bulk operations
+          ├ Bulk create 
+            ├ Download csv template
+            ├ Edit csv file
+            └ Upload modified csv file
+```
+
+### Multi-Factor Authentication  
+
+```
+Azure Active Directory
+    └ Users
+        └ Per-user MFA
+          ├ users 
+            └ [X] Selected user
+              └ Enable
+          └ service settings 
+            ├ [X] Allow users to create app passwords to sign in to non-browser apps
+            └ Verification options -> Methods available: SMS / Notif through mobile app / Token
+```
+
+### Self-service reset password  
+
+```
+Azure Active Directory
+    └ Password reset
+```
+
+**NB**: It needs Premium license  
 
 
 
