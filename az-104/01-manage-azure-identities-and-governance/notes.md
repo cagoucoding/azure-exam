@@ -1,8 +1,6 @@
-# FreeCodeCamp
+# Azure AD
 
-## Azure AD
-
-### Intro  
+## Intro  
 
 4 editions:  
 
@@ -11,7 +9,7 @@
 - **Premium 1 (P1)** Hybrid architecture, Advanced Group Access, Conditional Access  
 - **Premium 2 (P2)** Identity Protection, Identity Gouvernance  
 
-### Use case  
+## Use case  
 
 Authorize and authenticate to multiple sources:
 
@@ -20,7 +18,7 @@ Authorize and authenticate to multiple sources:
 - allow users to login with their ipD (Facebook or Google) -> External Identities  
 - to Office365 or Azure Microsoft  
 
-### AD terminology  
+## AD terminology  
 
 - **Domain**: logical grouping  
 - **Domain Controller (DC)**: server that authenticates and authorizes  
@@ -33,12 +31,12 @@ users, groups, computers and OU
 - **Directory Service**: provides the methods for storing directory data and
 making this data available to network users and administrators  
 
-### Tenant
+## Tenant
 
 Represents an organization in Azure AD.  
 Each Azure AD tenant is distinct and separate from other Azure AD tenants  
 
-### Azure Active Directory DOmain Services (AD DS)  
+## Azure Active Directory DOmain Services (AD DS)  
 
 In some case, need to setup own DC: *when doing a lift-and-shift on-premise 
 to Microsoft Azure and migratin AD, Azure AD doesn't support some domain services*  
@@ -49,11 +47,11 @@ AD DS provides managed domaine service:
 - LDAP  
 - Kerberos  
 
-### Azure AD Connect  
+## Azure AD Connect  
 
 Single Sign On from your on-premise workstation to MS Azure  
 
-### Users  
+## Users  
 
 Identity for a person or an employee  
 
@@ -61,7 +59,7 @@ Identity for a person or an employee
 - Users  
 - Guest Users  
 
-### Groups  
+## Groups  
 
 Contain:  
 - Owners: permissions to add and remove members  
@@ -73,7 +71,7 @@ You can assign:
 
 Members can request to join a group  
 
-### Assign Access Rights
+## Assign Access Rights
 
 4 ways:  
 - direct assignment: resource owner directly assigns the user to the resource  
@@ -83,9 +81,11 @@ which automatically gives all of the group members access to the resource
 which users are assigned to a specific resource  
 - External authority assignment: access comes from an external source  
 
-### External Identities  
+## External Identities  
 
 Can bring their own identities
+
+## Technical pratice
 
 ### Create a Tenant  
 
@@ -197,54 +197,3 @@ Azure Active Directory
 ```
 
 **NB**: It needs Premium license  
-
-
-
-
-# Udemy
-
-## Manage Azure Subscriptions  
-
-Creating / using a Subscription  
-
-## Analyze Resource utilization and consumption  
-
-### Azure Monitor and Alerts  
-
-In [Monitor](https://portal.azure.com/#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview) part.  
-
-- Metrics  
-  - select scope (resource type, ...)  
-  - select metric (percentage CPU, disks IO, ...)
-
-*Optional*: Pin to dashboard  
-
-- Alerts  
-  - select scope (resource) -> filter example: *Virtual machines*  
-  - configure **condition** -> example: *Percentage CPU*  
-    - operator -> Greater than Maximum 90 (*Whenever the maximum percentage cpu is greater than 90%*)  
-    - evaluated based on -> period 5m and frequency every 1m  
-  - add **action groups**  
-    - Notifications -> Type *Email/SMS message/Push/Voice*, Name *Email*, edit with right values  
-    - Actions -> ITSM, Automation Runbook, ITSM, Webhook  
-  - create the rule  
-    - select the action group  
-    - fill name, description and severity rule  
-
-### Log analytics  
-
-First, create a [Log Analytics workspaces](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.OperationalInsights%2Fworkspaces)  
-
-Into the created **Logs Analytics workspace**:  
-
-- Connect VM  
-  - **Workspace Data Sources**
-    - **Virtual machines** -> click on the vm to connect to -> *Connect* button  
-- Configure data sources  
-  - **Agents configuration** (Windows event logs, Windows perf counters, Linux perf counters, Syslog, IIS logs)  
-    - Add perf counter / facility  
-- Get logs  
-  - **Logs**  
-    - Run query -> `Heartbeat | where TimeGenerated > ago(30m) | where Computer == "vm01"`  
-
-

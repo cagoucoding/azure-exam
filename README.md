@@ -15,8 +15,8 @@
 ### [TODO](./az-900/todo.md)  
 
 
-## [AZ-104](./az-104)  
+## AZ-104  
 
-### [Lessons notes](./az-104/lessons.md)  
+### [Manage Azure identities and governance](./az-104/01-manage-azure-identities-and-governance/notes.md) (15-20%)
 
 ### [Resources](./az-104/resources.md)  
