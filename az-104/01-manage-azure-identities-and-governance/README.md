@@ -435,4 +435,5 @@ to a virtual machine
 
 > **_TODO_**: Do and document these exercises  
 
-- Exercise from [learning path](https://docs.microsoft.com/en-us/learn/modules/build-cloud-governance-strategy-azure/9-restrict-location-azure-policy)
+- Exercise - [Restrict deployments to a specific location by using Azure Policy](https://docs.microsoft.com/en-us/learn/modules/build-cloud-governance-strategy-azure/9-restrict-location-azure-policy)  
+- Knowledge check - [Build a cloud governance strategy on Azure](https://docs.microsoft.com/en-us/learn/modules/build-cloud-governance-strategy-azure/11-knowledge-check)

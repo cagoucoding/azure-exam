@@ -10,21 +10,74 @@
 - [X] Check if exam voucher is well received  
 - [X] Schedule the exam    
 
-### Documentation (exam content percentage)
+### Skills (exam content percentage)
 
-- [ ] Manage Azure identities and governance (15-20%)  
-  - [ ] Lessons  
-  - [ ] Exercises  
-- [ ] Implement and manage storage (15-20%)  
-  - [ ] Lessons  
-  - [ ] Exercises  
-- [ ] Deploy and manage Azure compute resources (20-25%)  
-  - [ ] Lessons  
-  - [ ] Exercises  
-- [ ] Configure and manage virtual networking (25-30%)  
-  - [ ] Lessons  
-  - [ ] Exercises  
-- [ ] Monitor and back up Azure resources (10-15%)   
+- [ ] [Manage Azure identities and governance](./az-104/01-manage-azure-identities-and-governance/README.md) (15-20%)  
+  - [ ] Manage Azure Active Directory (Azure AD) objects  
+    - [ ] create users and groups  
+    - [ ] create administrative units  
+    - [ ] manage user and group properties  
+    - [ ] manage device settings  
+    - [ ] perform bulk user updates  
+    - [ ] manage guest accounts  
+    - [ ] configure Azure AD join  
+    - [ ] configure self-service password reset  
+  - [ ] Manage role-based access control (RBAC)  
+    - [ ] create a custom role  
+    - [ ] provide access to Azure resources by assigning roles at different scopes  
+    - [ ] interpret access assignments  
+  - [ ] Manage subscriptions and governance  
+    - [ ] configure Azure policies  
+    - [ ] configure resource locks  
+    - [ ] apply and manage tags on resources  
+    - [ ] manage resource groups  
+    - [ ] manage subscriptions  
+    - [ ] manage costs  
+    - [ ] configure management groups  
+
+- [ ] [Implement and manage storage](./az-104/02-implement-and-manage-storage/README.md) (15-20%)  
+  - [ ] Secure storage  
+    - [ ] configure network access to storage accounts  
+    - [ ] create and configure storage accounts  
+    - [ ] generate shared access signature (SAS) tokens  
+    - [ ] manage access keys  
+    - [ ] configure Azure AD authentication for a storage account  
+    - [ ] configure access to Azure Files  
+  - [ ] Manage storage  
+    - [ ] export from Azure job  
+    - [ ] import into Azure job  
+    - [ ] install and use Azure Storage Explorer  
+    - [ ] copy data by using AZCopy  
+    - [ ] implement Azure Storage replication  
+    - [ ] configure blob object replication  
+  - [ ] Configure Azure files and Azure Blob Storage  
+    - [ ] create an Azure file share  
+    - [ ] create and configure Azure File Sync service  
+    - [ ] configure Azure Blob Storage  
+    - [ ] configure storage tiers  
+    - [ ] configure blob lifecycle management  
+
+- [ ] [Deploy and manage Azure compute resources](./az-104/03-deploy-and-manage-azure-compute-resources/README.md) (20-25%)  
+  - [ ] Automate deployment of virtual machines (VMs) by using Azure Resource Manager templates  
+    - [ ] modify an Azure Resource Manager template  
+    - [ ] configure a virtual hard disk (VHD) template  
+    - [ ] deploy from a template  
+    - [ ] save a deployment as an Azure Resource Manager template  
+    - [ ] deploy virtual machine extensions  
+  - [ ] Configure VMs  
+    - [ ] configure Azure Disk Encryption  
+    - [ ] move VMs from one resource group to another  
+    - [ ] manage VM sizes  
+    - [ ] add data disks  
+    - [ ] configure networking  
+    - [ ] redeploy VMs  
+    - [ ] configure high availability  
+    - [ ] deploy and configure scale sets  
+
+- [ ] [Configure and manage virtual networking](./az-104/04-configure-and-manage-virtual-networking/README.md) (25-30%)  
+
+- [ ] [Monitor and back up Azure resources](./az-104/05-monitor-and-backup-azure-resources/README.md) (10-15%)  
+
 
 ## Useful resources
 

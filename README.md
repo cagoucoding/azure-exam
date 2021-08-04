@@ -22,7 +22,11 @@ Let's check all these [tasks](./az-900/README.md#todo)
 
 ### Learning path
 
-- [Manage Azure identities and governance](./az-104/01-manage-azure-identities-and-governance/README.md) (15-20%)
+- [Manage Azure identities and governance](./az-104/01-manage-azure-identities-and-governance/README.md) (15-20%)  
+- [Implement and manage storage](./az-104/02-implement-and-manage-storage/README.md) (15-20%)  
+- [Deploy and manage Azure compute resources](./az-104/03-deploy-and-manage-azure-compute-resources/README.md) (20-25%)  
+- [Configure and manage virtual networking](./az-104/04-configure-and-manage-virtual-networking/README.md) (25-30%)  
+- [Monitor and back up Azure resources](./az-104/05-monitor-and-backup-azure-resources/README.md) (10-15%)  
 
 ### Resources  
 
