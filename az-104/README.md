@@ -12,7 +12,7 @@
 
 ### Skills (exam content percentage)
 
-- [ ] [Manage Azure identities and governance](./az-104/01-manage-azure-identities-and-governance/README.md) (15-20%)  
+- [ ] [Manage Azure identities and governance](./01-manage-azure-identities-and-governance/README.md) (15-20%)  
   - [ ] Manage Azure Active Directory (Azure AD) objects  
     - [ ] create users and groups  
     - [ ] create administrative units  
@@ -35,7 +35,7 @@
     - [ ] manage costs  
     - [ ] configure management groups  
 
-- [ ] [Implement and manage storage](./az-104/02-implement-and-manage-storage/README.md) (15-20%)  
+- [ ] [Implement and manage storage](./02-implement-and-manage-storage/README.md) (15-20%)  
   - [ ] Secure storage  
     - [ ] configure network access to storage accounts  
     - [ ] create and configure storage accounts  
@@ -57,7 +57,7 @@
     - [ ] configure storage tiers  
     - [ ] configure blob lifecycle management  
 
-- [ ] [Deploy and manage Azure compute resources](./az-104/03-deploy-and-manage-azure-compute-resources/README.md) (20-25%)  
+- [ ] [Deploy and manage Azure compute resources](./03-deploy-and-manage-azure-compute-resources/README.md) (20-25%)  
   - [ ] Automate deployment of virtual machines (VMs) by using Azure Resource Manager templates  
     - [ ] modify an Azure Resource Manager template  
     - [ ] configure a virtual hard disk (VHD) template  
@@ -74,9 +74,9 @@
     - [ ] configure high availability  
     - [ ] deploy and configure scale sets  
 
-- [ ] [Configure and manage virtual networking](./az-104/04-configure-and-manage-virtual-networking/README.md) (25-30%)  
+- [ ] [Configure and manage virtual networking](./04-configure-and-manage-virtual-networking/README.md) (25-30%)  
 
-- [ ] [Monitor and back up Azure resources](./az-104/05-monitor-and-backup-azure-resources/README.md) (10-15%)  
+- [ ] [Monitor and back up Azure resources](./05-monitor-and-backup-azure-resources/README.md) (10-15%)  
 
 
 ## Useful resources
