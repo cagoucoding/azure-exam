@@ -437,3 +437,136 @@ to a virtual machine
 
 - Exercise - [Restrict deployments to a specific location by using Azure Policy](https://docs.microsoft.com/en-us/learn/modules/build-cloud-governance-strategy-azure/9-restrict-location-azure-policy)  
 - Knowledge check - [Build a cloud governance strategy on Azure](https://docs.microsoft.com/en-us/learn/modules/build-cloud-governance-strategy-azure/11-knowledge-check)
+
+
+# Azure Resource Manager  
+
+## Intro  
+
+To manage Azure resources:
+- Create  
+- Update  
+- Delete    
+
+## Use cases  
+
+ARM is a gate keeper: all requests flow through ARM and it decides whether 
+that request can be performed on a resource  
+
+## Scoping  
+
+Boundary of control for Azure resources:  
+
+Management Groups -> Subscriptions -> Resource Groups -> Resources  
+
+### Management Groups  
+
+To manage multiple subscriptions  
+
+### Subscriptions  
+
+Can have multiple Subcriptions:  
+- Free Trial  
+- Pay-As-You-Go  
+- Azure for Students    
+
+From Subscription level, many abilities:
+
+```
+Subscriptions
+├ Resources Tags
+├ Access control (IAM) 
+| ├ Roles
+| ├ Roles assignments
+| ├ Deny assignments
+| └ Classic administrators
+├ Resources Groups 
+└ ...
+```
+
+### Resources Groups  
+
+Contain related Azure resources  
+
+### Resources Providers  
+
+For using Azure resources, you have to register Resources Providers  
+
+### Resources Tags  
+
+< Key, Value > pair that you can assign to Azure resources  
+
+To organize in differents ways:  
+- Resource management  
+- Cost management and optimization  
+- Operations management  
+- Security  
+- Governance and regulatory compliance  
+- Automation  
+- Workload optimization  
+
+### Resource Locks  
+
+Need to lock a Subscription / RG / Resource to prevent other users from accidentally deleting or modifying critical resources  
+
+2 modes:  
+- CanNotDelete
+- ReadOnly  
+
+### Azure Blueprints  
+
+Quick creation of **governed Subscriptions**  
+
+Declarative way to orchestrate the deployment of various resource templates and other artifacts:  
+
+- Role Assignments  
+- Policy Assignments  
+- ARM templates  
+- Resource Groups  
+
+=> *Azure Cosmos DB*  
+
+## Follow along  
+
+### Moving resources  
+
+Two RG:  
+- `rg1`  
+- `rg2`  
+
+`disk1` created in `rg1`  
+
+- moving `disk1` from `rg1` to `rg2`  
+
+```
+Resources Groups
+└ rg1
+  └ [X] disk1 
+    └ Move 
+      ├ Move to another resource group
+      ├ Move to another subscription
+      └ Move to another region
+```
+
+- create a Lock to `rg2` to forbid deletion and moving of resources  
+
+```
+Resources Groups
+└ Locks
+  └ Add lock 
+    ├ Lock name
+    ├ Lock type
+    | ├ Read-only
+    | └ Delete
+    └ Notes
+```
+
+- try to delete / move `disk1` out to `rg2`
+
+## Exercises  
+
+> **_TODO_**: Do and document these exercises  
+
+- Exercise - [Identify incorrectly assigned resources](https://docs.microsoft.com/en-us/learn/modules/move-azure-resources-another-resource-group/3-exercise-identify-incorrectly-assigned-resources)  
+
+- Exercise - [Move and verify resources between Azure resource groups](https://docs.microsoft.com/en-us/learn/modules/move-azure-resources-another-resource-group/7-exercise-move-verify-resources)  
