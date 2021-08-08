@@ -258,3 +258,110 @@ Deploy a custom template
 - Exercise - [Add parameters and outputs to your Azure Resource Manager template](https://docs.microsoft.com/en-us/learn/modules/create-azure-resource-manager-template-vs-code/5-exercise-parameters-output?pivots=cli)  
 
 - Knowledge check - [ARM Templates](https://docs.microsoft.com/en-us/learn/modules/create-azure-resource-manager-template-vs-code/6-knowledge-check)  
+
+# Virtual Machines  
+
+## Intro  
+
+- Size of the VM determined by the Image  
+- 20 VMs per region  
+- Billed at an hourly rate  
+- 99.9% availability (with premium disks)  
+
+## Sizes  
+
+**Types**: General Purposes, Compute Optimized  
+**Sizes** (also called Series or SKU family): B, Dsv3
+
+## Azure Compute Units  
+
+ACU provides a way of comparing compute (CPU) performance across Azure SKUs  
+
+| SKU Family | ACU / vCPU | vCPU:Core |
+| --- | --- | --- |
+| A1 - A4 | 100 | 1:1 |
+| D1 - D14 | 160 - 250 | 1:1 |
+
+## VM Mobile App  
+
+For monitoring and for doing basic operations in your VMs  
+
+## Hyper-V  
+
+Hardware virtualization product which allows you create and run software 
+version of a computer  
+
+2 generations:  
+- Generation 1  
+  - support most guest OS  
+  - BIOS-based architecture  
+- Generation 2  
+  - support most 64-bits version of Windows and Linux OS  
+  - UEFI-based boot achitecture  
+  - secure boot  
+  - larger boot volume up to 64 TB  
+
+## Connection ways  
+
+- SSH (port 22)  
+- RDP (port 3389)  
+- Bastions: with **Azure Bastion** service  
+
+### SSH  
+
+### RDP  
+
+Download the RDP file and open it wit RDP app  
+
+### Azure Bastion  
+
+Intermediate harden instance you can use to connect to your target server via 
+SSH or RDP  
+
+Bastion should be in the same Vnet of the target VMs  
+
+## Windows vs Linux servers  
+
+- Windows  
+  - need a Windows License (or Windows account unactivated)  
+  - set username and password  
+  - must use a much larger instances to run Windows at least a B2  
+  - full desktop environments  
+- Linux  
+  - most version require no license  
+  - small VM sizes  
+  - terminal based environments  
+
+## Update management  
+
+It allows you to manage and install OS updates and patches:  
+- need to install the Microsoft Monitoring Agent 
+(**Azure Automations** is the underlying service)  
+- perform a scan for update compliance performed every 12h on Windows and 
+every 3h on Linux  
+- 30 mins and 6h for dashboard to display updated data  
+
+## Follow along  
+
+### Create a Bastion  
+
+- Create Bastion 
+
+```
+Bastion
+├ Users
+| └ New user
+|   ├ [X] Create user 
+|   ├ Email: brian@cagoucoding.onmicrosoft.com
+|   ├ Name: Brian Cagoucoding
+|   ├ First name: Brian
+|   ├ Last name: Cagoucoding
+|   ├ Groups: select the group -> developers
+|   ├ Roles: select the role -> Application developer
+|   └ Additionnal info: ...
+└ Groups
+  └ New group
+    ├ Group type: Security
+    ├ Group name: developers
+    └ Group description: Developers of Cagou Coding
+```
