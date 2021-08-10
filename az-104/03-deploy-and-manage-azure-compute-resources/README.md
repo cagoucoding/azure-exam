@@ -496,4 +496,3 @@ Virtual machines
         └ Create
 ```
 
-# Application Gateway  
