@@ -345,23 +345,155 @@ every 3h on Linux
 
 ### Create a Bastion  
 
-- Create Bastion 
+After having created a VM `testbastion`
+
+- Configure the VM as a Bastion 
 
 ```
-Bastion
-├ Users
-| └ New user
-|   ├ [X] Create user 
-|   ├ Email: brian@cagoucoding.onmicrosoft.com
-|   ├ Name: Brian Cagoucoding
-|   ├ First name: Brian
-|   ├ Last name: Cagoucoding
-|   ├ Groups: select the group -> developers
-|   ├ Roles: select the role -> Application developer
-|   └ Additionnal info: ...
-└ Groups
-  └ New group
-    ├ Group type: Security
-    ├ Group name: developers
-    └ Group description: Developers of Cagou Coding
+Virtual machines
+└ [X] Select virtual machine: testbastion
+  └ Connect
+    └ Use Bastion
+      ├ Step 1: Add new CIDR 
+      ├ Step 2: Create the Bastion subnet
+      ├ Step 3: Create Bastion
+      └ Create Azure Bastion using defaults
 ```
+
+- Connect via user/password credentials to open a new window with RDP connection  
+
+### Create Windows VM  
+
+> **_TODO_**: Do and document these exercises  
+
+### Create Linux VM  
+
+> **_TODO_**: Do and document these exercises  
+
+### VM monitoring  
+
+> **_TODO_**: Do and document these exercises  
+
+```
+Virtual machines
+└ [X] Select virtual machine: testbastion
+  └ Diagnostic settings
+    └ ...
+      ├ ... 
+      ├ ...
+      └ ...
+```
+
+## Exercises  
+
+> **_TODO_**: Do and document these exercises  
+
+- Knowledge check - [Configure virtual machines](https://docs.microsoft.com/en-us/learn/modules/configure-virtual-machines/10-knowledge-check)  
+
+- Exercise - [Create a Windows virtual machine](https://docs.microsoft.com/en-us/learn/modules/create-windows-virtual-machine-in-azure/3-exercise-create-a-vm)  
+
+- Exercise - [Connect to a Windows virtual machine using RDP](https://docs.microsoft.com/en-us/learn/modules/create-windows-virtual-machine-in-azure/5-exercise-connect-to-a-windows-vm-using-rdp)  
+
+# Azure Managed Disks  
+
+## Intro  
+
+- Block level storage volumes  
+- 3 replicas of your data  
+- create up to 50 000 VM disks of a type in a subscription per region  
+- integrated with *availability sets* and support *availability zones*  
+- **Azure Backup** for creating a backup job  
+
+## Disk Encryption  
+
+2 types:  
+
+- Server Side Encryption (SSE)  
+  - by default  
+  - encryption-at-rest can be managed in 2 ways  
+    - platform-managed keys  
+    - customer-managed keys  
+
+- Azure Disk Encryption (ADE)  
+  - encryption the OS and Data disks  
+  - BitLocker (Windows) / DM-Crypt (Linux)  
+
+## Disk Roles  
+
+- Data disk  
+  - for storing application data  
+  - max capacity of 32 767 GiB  
+  - size of the VM determines how many data disks you can attach  
+
+- OS disk  
+  - contains pre-installed OS and boot volume  
+  - max capacity of 4095 GiB  
+
+- Temporary disk  
+  - not managed disk  
+  - short-term storage for applications and processes (page or swap files)  
+  - data may be lost during a maintenance event  
+  - data will persist during a successful standard reboot  
+  - typically `/dev/sdb` or `D:`  
+
+## Managed Disk Snapshots & Managed Custom Image  
+
+**Managed disk snapshot** is a read-only crash-consistent full copy of a managed disk  
+
+**Managed custom image** allows you to create an image of your disk from your VM (all disks)  
+
+## Disk types  
+
+4 tiers:  
+
+- Ultra Disks  
+  - suited for data-intensive worloads such as SAP HANA, top tier databases  
+  - can only be used as data disks  
+  - only supported with very specific VM series  
+
+- Premium SSD  
+  - suited for mission-critical production applications  
+  - only be used with VM series that are premium storage-compatible  
+
+- Standard SSD  
+  - cost-effective storage option  
+  - suited for web servers, low IOPS application servers, dev/test workloads  
+
+- Standard HDD  
+  - non critical  
+  - infrequent access  
+
+## Bursting  
+
+Ability to boost disk storage IOPS and MB/s performance for a period of time 
+on both VMs and disks  
+
+## Follow along  
+
+### Attach a data disk to a VM 
+
+```
+Virtual machines
+└ [X] Select VM: testvm
+  └ Disks
+    └ Create and attach data disks
+      ├ LUN: 0
+      ├ Disk name: mysecondisk
+      ├ Storage type: Standard SSD LRS
+      └ Size (GiB): 4
+```
+
+### Backup a data disk  
+
+```
+Virtual machines
+└ [X] Select VM: testvm
+  └ Disks
+    └ [X] Select disk: mysecondisk
+      └ Create snapshot
+        ├ Name: mysecondiskbackup
+        ├ Storage type: Zone-redundant
+        └ Create
+```
+
+# Application Gateway  
