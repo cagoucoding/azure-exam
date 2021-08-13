@@ -496,3 +496,60 @@ Virtual machines
         └ Create
 ```
 
+# Azure Scale Sets  
+
+## Intro  
+
+**Scale Set** is a group of identical VMs  
+
+Azure Scale Setes allows you to automatically increase or decrease your VM capacity  
+
+- create Scaling Policies to automatically add or remove based on Host Metrics  
+- create Health checks and set a Repair Policy to replace unhealthy instances  
+- associate a Load Balancer to distribute VMs across AZ  
+- can scale to 100 or even 1000 of VMs  
+
+## Associate a Load Balancer  
+
+2 types of LB:  
+- Application Gateway: HTTP/HTTPS web traffic LB  
+- Azure Load Balancer: supports all TCP/UDP network traffic  
+
+## Scaling Policy  
+
+Determine when a VM should be added or removed to meet current capacity requirements  
+- scale out: when instance should be added to the Scale Set  
+- scale in: when instance should be removed from the Scale Set  
+
+1. **Scale-In Policy**: how to determines what VM is removed to decrease the capacity 
+of the Scale Set  
+  - Default: highest instance ID  
+  - Newest VM  
+  - Oldest VM  
+2. **Update Policy**: how VM instances are brought up-to-date with the latest Scale Set model  
+  - Automatic: immediately in random order  
+  - Manual  
+  - Rolling: roll out in batches with optional pause  
+
+## Health Monitoring  
+
+Can be enabled to dertermine if your server is healthy or unhealthy  
+
+2 modes:  
+- Application health extension: ping a HTTP request and expect a status 200  
+- Load Balancer Probe: allows you to check based on TCP, UDP or HTTP requests  
+
+## Advanced features  
+
+- Allocation policy: deploy beyond 100 instances  
+- Proximity placement groups: group Azure resources physically closer together in 
+the same region  
+
+## Exercises  
+
+> **_TODO_**: Do and document these exercises  
+
+- Knowledge check - [Configure virtual machine availability](https://docs.microsoft.com/en-us/learn/modules/configure-virtual-machine-availability/11-knowledge-check)  
+
+
+# Azure App Services  
