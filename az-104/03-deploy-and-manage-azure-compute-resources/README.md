@@ -553,3 +553,151 @@ the same region
 
 
 # Azure App Services  
+
+## Intro  
+
+HTTP-based service for hosting web app, REST APIs and mobile backends  
+
+## Runtimes  
+
+**Runtime** software/instructions that are executed while your program is running  
+
+## Custom Container  
+
+You can create custom containers for Windows or Linux  
+
+create own Docker Container -> push to Azure Container Registry -> deploy to App Service  
+
+## Deployment Slots  
+
+Create different environments of your web app associated to a different hostname  
+
+## App Service Environment  
+
+ASE is an Azure Service feature that provides a fully isolated and dedicated 
+environment for securely running App Service apps at high scale  
+
+Use cases:  
+- very high scale  
+- isolation and secure network access  
+- high memory utilization  
+
+2 deployments types:  
+- External ASE: exposes on an internet-accessible IP address  
+- ILB ASE: LB with an internal IP address  
+
+## Deployment  
+
+Many ways to deploy your app:  
+- run from Package  
+- from ZIP or WAR  
+- FTP  
+- continuously (GitHub, Bitbucket, Azure Repos) uses Kudu and Azure Pipelines  
+- using custom CI/CD pipeline  
+- ARM templates  
+
+## Azure App Service Plan  
+
+How you pay and what resources are available to you  
+
+3 pricing tiers:  
+
+- Shared Tiers  
+  - Free Tier  
+  - Shared Tier (Linux not supported)
+
+- Dedicated Tiers  
+  - Basic  
+  - Standard  
+  - Premium  
+
+- Isolated Tier  
+
+## WebJobs  
+
+Enables you to run a program or script in the same instance as a web app, API or mobile app  
+
+*No additional cost* to use WebJobs  
+
+## Follow along  
+
+### Configure and deploy Azure App Service  
+
+- Create the App Service
+
+```
+App Services
+└ Create
+  ├ RG: voyager
+  ├ Name: az104voyagerapp
+  ├ Publish: Code
+  ├ Runtime stack: Python 3.8
+  ├ OS: Linux
+  ├ Region: France Central
+  ├ App Service Plan
+  | ├ Plan: ASP-voyager-a8de
+  | └ Sku and size: Basic B1
+  └ Review + create
+```
+
+- Deploy the app
+
+```
+App Services
+└ ## Select the create App Service ##
+  └ Deployment Center
+    ├ Source: GitHub
+    ├ GitHub
+    | ├ Signed in as: brian-dev
+    | ├ Organization: brian-dev
+    | ├ Repository: python-docs-hello-world
+    | └ Branch: master
+    ├ Build
+    | ├ Runtime stack: Python
+    | └ Version: Python 3.8
+    └ Save
+```
+
+### Trigger a Deploy via Github Actions  
+
+> **_TODO_**: Do and document these exercises  
+
+### Create Deployment Slots  
+
+> **_TODO_**: Do and document these exercises  
+
+```
+App Services
+└ ## Select the create App Service ##
+  └ Deployment Slots
+      └ Add Slot
+        ├ Source: GitHub
+        ├ GitHub
+        | ├ Signed in as: brian-dev
+        | ├ Organization: brian-dev
+        | ├ Repository: python-docs-hello-world
+        | └ Branch: staging
+        ├ Build
+        | ├ Runtime stack: Python
+        | └ Version: Python 3.8
+        └ Save
+```
+
+### Scaling App Service
+
+> **_TODO_**: Do and document these exercises  
+
+
+## Exercises  
+
+> **_TODO_**: Do and document these exercises  
+
+- Knowledge check - [Configure app service plans](https://docs.microsoft.com/en-us/learn/modules/configure-app-service-plans/6-knowledge-check)  
+
+- Knowledge check - [Configure Azure App Services](https://docs.microsoft.com/en-us/learn/modules/configure-app-service-plans/6-knowledge-check)  
+
+- Exercise - [Create a web app in the Azure portal](https://docs.microsoft.com/en-us/learn/modules/host-a-web-app-with-azure-app-service/3-exercise-create-a-web-app-in-the-azure-portal?pivots=python)  
+
+- Exercise - [Write code to implement a web application](https://docs.microsoft.com/en-us/learn/modules/host-a-web-app-with-azure-app-service/5-exercise-implement-a-web-application?pivots=python)  
+
+- Exercise - [Deploy your code to App Service](https://docs.microsoft.com/en-us/learn/modules/host-a-web-app-with-azure-app-service/7-exercise-deploy-your-code-to-app-service?pivots=python)  
