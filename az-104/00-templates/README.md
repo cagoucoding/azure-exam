@@ -4,6 +4,9 @@
 
 Content of the submodule   
 
+![alt text](../images/azure_logo.png "Azure Logo")  
+
+
 ## Follow along  
 
 ### Practice topic  
