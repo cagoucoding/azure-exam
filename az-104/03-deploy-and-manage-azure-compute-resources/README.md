@@ -701,3 +701,71 @@ App Services
 - Exercise - [Write code to implement a web application](https://docs.microsoft.com/en-us/learn/modules/host-a-web-app-with-azure-app-service/5-exercise-implement-a-web-application?pivots=python)  
 
 - Exercise - [Deploy your code to App Service](https://docs.microsoft.com/en-us/learn/modules/host-a-web-app-with-azure-app-service/7-exercise-deploy-your-code-to-app-service?pivots=python)  
+
+# Availability for VMs  
+
+## Follow along  
+
+### Backup VM using images    
+
+- Select the vm and create a image capture
+
+```
+Virtual machines
+└ ## select the vm ##
+  └ Capture
+    ├ RG: az104
+    ├ Instance details
+    | ├ Region
+    | ├ Share image to Shared image gallery
+    | | ├ Yes share it to a gallery as an image version
+    | | └ [X] No capture only a managed image
+    | └ [ ] Automatically delete this VM
+    ├ Gallery details
+    | ├ Target image gallery
+    | ├ OS state
+    | | ├ [X] Generalized
+    | | └ Specialized
+    | └ Target image definition: az104-def
+    ├ Version details
+    | ├ Version number: 0.0.1
+    | ├ Exclude from latest
+    | └ End of life date
+    ├ Replication
+    └ Review + create
+```
+
+### Review Availability Sets  
+
+> **_TODO_**: Do and document these exercises  
+
+### Create a Scale Sets  
+
+- From a VM image stored in the gallery, create a VMSS  
+
+```
+Shared image galleries
+└ ## select the gallery ##
+  └ ## select the image definition ##
+    └ ## select the version ##
+      └ Create VMSS
+        ├ RG: az104
+        ├ Name: az104vmss
+        ├ ...
+        └ Review + create
+```
+
+- Scale out  
+
+```
+Virtual machine scale sets
+└ ## select the vmss ##
+  └ Scaling
+    ├ [X] Manual scale
+    ├ Custom scale
+    └ Save
+```
+
+### Create an Application Gateway  
+
+> **_TODO_**: Do and document these exercises  
