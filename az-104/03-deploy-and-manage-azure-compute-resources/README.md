@@ -769,3 +769,168 @@ Virtual machine scale sets
 ### Create an Application Gateway  
 
 > **_TODO_**: Do and document these exercises  
+
+
+# Azure Container Instances (ACI)  
+
+## Intro  
+
+Allows to launch containers without the need to worry about configuring 
+or managing the underlying VM  
+
+- can be provisioned within seconds  
+- are billed per second  
+- have granular and custom sizing of vCPUs, Memory and GPUs  
+- can deploy both Windows and Linux containers  
+- possibility to persist storage with Azure Files  
+- can be accessed via a FQDN  
+
+**Container Groups** are collection of containers that get scheduled on the same host machine  
+
+## Container Restart Policies  
+
+Specifies what a container should do when their process has completed:  
+
+- Always  
+- Never  
+- OnFailure  
+
+## Container Environement Variables  
+
+Allows you to pass configuration details to your containers  
+
+For secured env vars, use `az` option `--secure-environment-variables`  
+
+## Container Persistent Storage  
+
+Azure Containers are stateless by default and to persist state, you need to 
+mount an external volume:  
+- Azure Files (file share)  
+- Secret Volume  
+- Empty Directory  
+- Cloud git repo  
+
+## Container Troubleshooting  
+
+```
+$ az container logs \
+    --resource-group az104 \
+    --name web-app
+
+$ az container attach \
+    --resource-group az104 \
+    --name web-app
+
+$ az container exec \
+    --resource-group az104 \
+    --name web-app \
+    --exec-command /bin/sh
+
+$ az monitor metrics list \
+    --resource $CONTAINER_ID \
+    --metric CPUUSage \
+    --output table
+```
+
+## Follow along  
+
+### Create an Azure Container Instances  
+
+```
+Container instances
+└ Add
+  ├ RG: az104
+  ├ Container name: web-app
+  ├ Image source
+  | ├ [X] Quickstart images
+  | ├ Azure Container Registry
+  | └ Docker Hub or other registry
+  ├ Size
+  ├ Restart Polilcy
+  | ├ [X] On Failure
+  | ├ Always
+  | └ Never
+  └ Review
+```
+
+## Exercises  
+
+> **_TODO_**: Do and document these exercises  
+
+- Knowledge check - [Configure Azure Container Instances](https://docs.microsoft.com/en-us/learn/modules/configure-azure-container-instances/6-knowledge-check)  
+
+
+# Azure Container Registry (ACR)  
+
+## Intro  
+
+Managed, private Docker registry service (Docker Registry OSS 2.0) 
+
+## Registry Tasks  
+
+Allows you to automate OS and framework patching for your containers  
+
+
+# Azure Kubernetes Service  
+
+## Intro  
+
+Deploying a managed Kubernetes cluster in Azure  
+
+## Bridge to Kubernetes  
+
+Extension in Vscode that allows you to include a locally running service 
+to your AKS cluster  
+
+## Follow along  
+
+### Create an Azure Kubernetes Service  
+
+- Register to the `Microsoft.Kubernetes` and `Microsoft.KubernetesConfiguration` 
+resource providers
+
+```
+Subscription
+└ ## select the subscription ##
+  └ Resource providers
+    ├ ## search for kubernetes ##
+    └ Register ## for each Kubernetes provider
+```
+
+> **_TODO_**: Do and document these parts  
+
+- Create a cluster via Azure portal
+
+```
+Kubernetes services
+└ Add
+  ├ ...
+  └ ...
+```
+
+- Create a cluster via `az aks`
+
+- Get credential (kubeconfig file) 
+
+```
+$ az aks get-credential \
+    --g az104 \
+    --name myaks
+```
+
+- Use `kubectl` to use and deploy your app in the cluster  
+
+- Add nodes to your cluster  
+
+```
+$ az aks scale \
+    -g az104 \
+    --name myaks \
+    --node-count 3
+```
+
+## Exercises  
+
+> **_TODO_**: Do and document these exercises  
+
+- Knowledge check - [Configure Azure Kubernetes Service](https://docs.microsoft.com/en-us/learn/modules/configure-azure-kubernetes-service/8-knowledge-check)  
