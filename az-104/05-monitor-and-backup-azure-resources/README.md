@@ -204,3 +204,106 @@ and to understand what users do with your app
 - designed to help you continuously improve perf and usability  
 - integrates with your DevOps process  
 - can monitor and analyze telemetry from mobile apps  
+
+## Exercises  
+
+> **_TODO_**: Do and document these exercises  
+
+- Knowledge check - [Configure Azure Monitor](https://docs.microsoft.com/en-us/learn/modules/configure-azure-monitor/8-knowledge-check)  
+
+- Knowledge check - [Configure Azure Alerts](https://docs.microsoft.com/en-us/learn/modules/configure-azure-alerts/5-knowledge-check)  
+
+- Knowledge check - [Configure Log Analytics](https://docs.microsoft.com/en-us/learn/modules/configure-log-analytics/8-knowledge-check)  
+
+- Exercise - [Use metric alerts to alert on performance issues in your Azure environment](https://docs.microsoft.com/en-us/learn/modules/incident-response-with-alerting-on-azure/4-exercise-metric-alerts)  
+
+- Exercise - [Use activity log alerts to alert on events within your Azure infrastructure](https://docs.microsoft.com/en-us/learn/modules/incident-response-with-alerting-on-azure/7-exercise-activity-log-alerts)  
+
+- Exercise - [Create basic Azure Monitor log queries to extract information from log data](https://docs.microsoft.com/en-us/learn/modules/analyze-infrastructure-with-azure-monitor-logs/4-exercise-create-log-queries)  
+
+- Exercise - [Set up a Log Analytics workspace and Azure Monitor VM Insights](https://docs.microsoft.com/en-us/learn/modules/monitor-performance-using-azure-monitor-for-vms/3-exercise-set-up-log-analytics-workspace)  
+
+- Exercise - [Build log queries](https://docs.microsoft.com/en-us/learn/modules/monitor-performance-using-azure-monitor-for-vms/5-exercise-build-log-queries)  
+
+
+# Azure Backup Service  
+
+## Intro  
+
+Directly integrated with Azure Services  
+
+What can I backup:  
+
+- On-Premise  
+- Azure VMs  
+- Azure Files  
+- SQL Server  
+- SAP HANNA databases  
+- Azure Databases  
+
+## Azure Recovery Service (ARS) Vault  
+
+Storage entity in Azure that houses data and recovery points  
+
+It supports:  
+- System Center Data Protection Manager (DPM)  
+- Windows Server  
+- Azure Backup Server  
+- ...
+
+Its features:  
+- enhanced capabilities to help secure backup data  
+- central monitoring for your hybrid IT environment  
+- Azure RBAC  
+- soft delete  
+- Cross Region Restore  
+
+## Microsoft Azure Recovery Services (MARS) agent 
+
+Can backup files, folders and system state for Windows VMs *only*  
+
+## Backup Policy  
+
+Configure it with:  
+- datasource type  
+- frequency  
+- number of snapshots retained  
+- time range for retention  
+
+## Azure Site Recovery (ASR)  
+
+For business continuity and disaster recovery strategy  
+
+## Follow along  
+
+### Create a Recovery Services Vault  
+
+- Create a Backup Vault 
+
+```
+Backup center
+└ Backup Vault
+  ├ Resource group: az104
+  ├ Vault name: az104-vault
+  ├ Region: France Central
+  └ Review+create
+```
+
+- Configure the backup vault  
+
+```
+Backup center
+└ ## select the backup vault ##
+  └ Backup
+    ├ Backup goal
+    ├ Configure Backup
+    └ Add
+```
+
+## Exercises  
+
+> **_TODO_**: Do and document these exercises  
+
+- Knowledge check - [Configure file and folder backups](https://docs.microsoft.com/en-us/learn/modules/configure-file-folder-backups/7-knowledge-check)  
+
+- Knowledge check - [Configure virtual machine backups](https://docs.microsoft.com/en-us/learn/modules/configure-virtual-machine-backups/11-knowledge-check)  
